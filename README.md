@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+reference site: [https://github.com/JeffreyChix/nextjs-headless-wordpress/tree/main]
+
 First, run the development server:
 
 ```bash
