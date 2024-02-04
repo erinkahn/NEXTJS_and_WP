@@ -1,17 +1,16 @@
 import { getPostBySlug } from "@/lib/service";
+import Link from "next/link";
 
 // @ts-ignore
 export default async function PostDetails({ params: { slug } }) {
   const post = await getPostBySlug(slug);
-
-  console.log(post);
 
   return (
     <section className="container mx-auto py-12">
       <div
         className="post-header relative flex flex-col items-center justify-center w-full min-h-[200px] rounded-md"
         style={{
-          backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
+          backgroundImage: `url(${post.featuredImage?.node.sourceUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -29,6 +28,8 @@ export default async function PostDetails({ params: { slug } }) {
         className="post-content w-full md:w-3/5 mx-auto mt-20 py-6 text-lg"
         dangerouslySetInnerHTML={{ __html: `${post.content}` }}
       ></div>
+
+      <Link href="/blog">Back to Posts</Link>
     </section>
   );
 }
