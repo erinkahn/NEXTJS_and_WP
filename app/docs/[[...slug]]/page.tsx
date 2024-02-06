@@ -1,5 +1,9 @@
 import React from "react";
 
+// you add two [[...slug]] so that the docs page shows up and doesnt show a 404 page. with only [...slug] you will get a 404 page at localhost:3000/docs
+
+// this is called catch-all routing or catch-all dynamic segments
+
 const Docs = ({
   params,
 }: {
