@@ -1,9 +1,9 @@
 import React from "react";
-import { getPosts } from "@/lib/service";
+import { getPosts } from "@/app/lib/service";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = async () => {
+const BlogPage = async () => {
   const posts = await getPosts(100);
 
   return (
@@ -29,8 +29,13 @@ const page = async () => {
                   <h3 className="text-2xl py-4">{post.title}</h3>
                   <div
                     className="italic"
-                    dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                    dangerouslySetInnerHTML={{
+                      __html: post.content.slice(0, 60) + "...",
+                    }}
                   ></div>
+                  <br />
+                  <p>Date: {post.date}</p>
+                  <p>Author: {post.author.node.name}</p>
                 </Link>
               </div>
             </>
@@ -41,4 +46,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default BlogPage;

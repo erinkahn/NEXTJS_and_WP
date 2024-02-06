@@ -1,6 +1,9 @@
+import { getPages } from "@/app/lib/service";
 import Link from "next/link";
 
-export const Nav = () => {
+export const Nav = async () => {
+  const pages = await getPages();
+
   return (
     <header className="container mx-auto py-4 px-4">
       <div className="navbar w-full md:w-3/5 mx-auto border-b-2">
@@ -11,6 +14,16 @@ export const Nav = () => {
           <Link href="/blog" className="px-4">
             Blog
           </Link>
+          |
+          <ul className="ml-5 flex gap-5">
+            {pages.map((page: any) => {
+              return (
+                <Link href={`/${page.title}`} key={page.id}>
+                  {page.title}
+                </Link>
+              );
+            })}
+          </ul>
         </nav>
       </div>
     </header>

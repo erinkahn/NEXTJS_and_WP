@@ -1,8 +1,8 @@
-import { getPostBySlug } from "@/lib/service";
+import { getPostBySlug } from "@/app/lib/service";
 import Link from "next/link";
 
 // @ts-ignore
-export default async function PostDetails({ params: { slug } }) {
+export default async function SinglePostPage({ params: { slug } }) {
   const post = await getPostBySlug(slug);
 
   return (
