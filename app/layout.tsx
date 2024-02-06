@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import "./globals.css";
 import { Nav } from "@/app/components/Nav";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   // applies to all pages unless put in a page which will only apply to that page
-  title: "NEXTJS App",
+  title: {
+    default: "NEXTJS App",
+    template: "%s | NEXTJS App",
+  },
   description: "Just for learning",
 };
 
