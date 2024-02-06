@@ -14,6 +14,9 @@ export const Nav = async () => {
           <Link href="/blog" className="px-4">
             Blog
           </Link>
+          <Link href="/products" className="px-4">
+            Products
+          </Link>
           |
           <ul className="ml-5 flex gap-5">
             {pages.map((page: any) => {
