@@ -17,7 +17,15 @@ export const Nav = async () => {
           <Link href="/products" className="px-4">
             Products
           </Link>
-          |
+          <Link href="/products/reviews" className="px-4">
+            Reviews
+          </Link>
+          <Link href="/login" className="px-4">
+            Login
+          </Link>
+
+          {/* 
+          // from wordpress
           <ul className="ml-5 flex gap-5">
             {pages.map((page: any) => {
               return (
@@ -26,7 +34,7 @@ export const Nav = async () => {
                 </Link>
               );
             })}
-          </ul>
+          </ul> */}
         </nav>
       </div>
     </header>
