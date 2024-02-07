@@ -6,8 +6,10 @@ reference site: [https://github.com/JeffreyChix/nextjs-headless-wordpress/tree/m
 and this: [https://nextjs-headless-wordpress-lac.vercel.app/]
 demo: [https://dev.to/jeffsalive/a-detailed-guide-on-how-to-build-a-website-with-nextjs-and-headless-wordpress-seo-2023-web-development-4nof]
 
-First, run the development server:
+and also this next14 youtube series:
+[https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&pp=iAQB]
 
+run
 ```bash
 npm run dev
 ```
