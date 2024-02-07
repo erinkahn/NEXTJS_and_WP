@@ -12,6 +12,7 @@ export const Nav = () => {
     { href: "/", title: "Home" },
     { href: "/blog", title: "Blog" },
     { href: "/products", title: "Products" },
+    { href: "/products/order-products", title: "Order" },
     { href: "/login", title: "Login" },
   ];
 
